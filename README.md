@@ -1,6 +1,10 @@
-# mangaLog
-API node.js express
+#API設計のサンプル
 
+<h1>使用技術</h1>
+<ul>
+  <li>node.js</li>
+    <li>express</li>
+</ul>
 <h1>実装機能</h1>
 読んだ漫画の履歴の保存と取得
 
@@ -21,7 +25,7 @@ node mangaMangaLog.js
 <ul>
   <li>URI: http://localhost:3001/mangaLog</li>
   <li>パラメータ: name, text</li>
-  <li>レスポンス: { "res": true, "readLog": { "name": "キングダム", "text": "熱い" }}</li>
+  <li>レスポンス: { "res": true, "readLog": { "name": "ブルーロック", "text": "今流行り終わり？？" }}</li>
   <li>エラー: { "res": false, "error": "invalid parameter" }</li>
 </ul>
 
