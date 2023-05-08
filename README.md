@@ -30,7 +30,7 @@ node mangaMangaLog.js
 <ul>
   <li>URI: http://localhost:3001/mangaLog</li>
   <li>なし</li>
-  <li>レスポンス: { "res": true, "readLog": { "name": "キングダム", "text": "熱い" }}</li>
+  <li>レスポンス: { "res": true, "readLog": { "name": "ブルーロック", "text": "今流行り終わり？？" }}</li>
   <li>エラー: { "res": false, "error": "invalid parameter" }</li>
 </ul>
 
