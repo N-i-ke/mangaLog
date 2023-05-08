@@ -11,7 +11,7 @@ npm install
 node mangaMangaLog.js
 
 <h1>Postmanのインストール</h1>
-↓
+
 <a>https://www.postman.com/</a>
 
 <h1>使用方法</h1>
