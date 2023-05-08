@@ -14,7 +14,7 @@ mangaLog.post('/mangaLog', (req, res) => {
     if (!(readLog.name && readLog.text)) { 
         return res.json({
             "res": false,
-            "error": "inavalid error"
+            "error": "inavalid parameter"
         })
     }
 
