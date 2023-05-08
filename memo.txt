@@ -1,0 +1,112 @@
+考え方の土台
+
+HTTPの仕組み
+
+URLに対して使用
+
+HTTPメッソドを使う
+get post 
+
+Get url
+https://api.twitter.com/user_timeline
+
+これに関してはタイムライン情報を教えてって言ってレスポンスを返す
+
+例、
+
+api.twitter.com/followers/list
+
+screen_name:yamaura
+
+やまうらっていう人のユーザー名を取得して返す
+
+サーバーから帰ってくるレスポンスは
+json
+
+ブラウザ系webapiはjsonが一般的（2021/12/19参考記事）
+jsonである理由は使用しやすいから
+{"users":[
+    {user-object},
+    {user-object}
+]}
+
+💡webapiを作成するには
+
+1.画面遷移図を作成
+
+2.API機能一覧を列挙
+
+3.URLとHTTPメソッドを設定
+
+4.リクエストパラメータを設計する
+
+5.レスポンスデータを設計する
+
+✅今回のサービスは読者ログサービス
+
+step１
+画面遷移図を作成
+
+読者ログの一覧 ⇄ 読者ログの作成
+
+step2
+読者ログを記録して
+読者ログの一覧を取得する。
+の二つのみ
+
+step3
+urlとhttpメソッドを設定する
+
+読者ログを記録するhttpsのurl
+httpRequestのPOSTで保存
+POST https://api.exmaple.com/booklog
+
+読者ログを記録したログの一覧を取得するhttpsのurl
+httpRequestの取得がGET
+GET https://api.exmaple.com/booklog
+
+step４ パラメータを設計する
+POSTの方はname,text
+
+GETの方はパラメータはいらない→取得するだけで特に使用しないため
+
+step5 レスポンスデータの設計は
+
+読書ログを記録する
+
+ここをうまいこと自分で設計する感じで
+成功した時は{"OK":true,
+    パラメータを二つ取得する感じ
+    "booking":{
+        "name":"キングダム","text":"今熱い！！"
+    }
+}
+失敗した時は{"OK":false,
+    "error":"invalid parameter"
+    パラメータの取得に失敗しました
+}
+
+レスポンスデータの設計は
+ログを全部取得できた時は
+{"responce": true[
+    {"name":"キングダム","text":"今が熱い大ヒット作品"},
+    {"name":"ワンピース","text":"長年のヒット作品"},
+]}
+
+今回の設計しよう技術
+
+Node.js + Express framework
+POSTMAN 簡単にAPI設計できるサービス
+
+
+
+
+
+
+
+
+
+
+
+
+
