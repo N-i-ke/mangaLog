@@ -18,8 +18,6 @@ node mangaMangaLog.js
 
 <a>https://www.postman.com/</a>
 
-<h1>使用方法</h1>
-
 
 <h1>漫画履歴を保存する</h1>
 <ul>
